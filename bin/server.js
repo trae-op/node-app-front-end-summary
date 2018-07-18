@@ -1,8 +1,9 @@
 
-
+'use strict';
 
 var config = require('config');
 var _ = require('lodash');
+var Path = require('path');
 var Hapi = require('hapi');
 var server = new Hapi.Server();
 
@@ -18,7 +19,9 @@ var routesCompanies = require('../routes/companies');
 server.connection({
     port: process.env.PORT || config.get('connection.port'),
     host: config.get('connection.host'),
-    routes: { cors: true },
+    routes: {
+        cors: true
+    },
     router: {
       isCaseSensitive: false,
       stripTrailingSlash: false
@@ -56,6 +59,21 @@ server.register([
         routesCompanies
     );
 
+  server.route({
+    method: 'GET',
+    path: '/{param*}',
+    config: {
+      handler: {
+        directory : {
+          path : 'views'
+        }
+      },
+      auth: {
+        mode: 'try'
+      }
+    }
+  });
+
     server.route(allRoutes);
 });
 
@@ -63,7 +81,7 @@ server.start(function (err) {
     if (err) {
         throw err;
     }
-    
+
     console.log('Server running at:' + server.info.uri);
 });
 
