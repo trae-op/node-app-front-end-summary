@@ -8,7 +8,6 @@ var server = new Hapi.Server();
 
 var users = require('../handlers/users');
 
-
 var routesUsers = require('../routes/users');
 var routesAbouts = require('../routes/abouts');
 var routesScripts = require('../routes/scripts');
@@ -60,11 +59,11 @@ server.register([
     server.route(allRoutes);
 });
 
-
 server.start(function (err) {
     if (err) {
         throw err;
     }
+    
     console.log('Server running at:' + server.info.uri);
 });
 
