@@ -1,0 +1,84 @@
+{
+  "connection": {
+    "port": 8000,
+    "host": "localhost",
+    "db": "mongodb://localhost/newresume"
+  },
+  "project_url": "http://localhost:3000",
+  "jwt_private_key": "datrarkeopmanx",
+  "service_email": {
+    "service": "gmail",
+    "user": "traeopwork@gmail.com",
+    "pass": "darkmanx1988"
+  },
+  "chargify": {
+    "domain": "the_correct_value_is_in_local_json",
+    "api_key": "the_correct_value_is_in_local_json",
+    "shared_key": "the_correct_value_is_in_local_json"
+  },
+  "messages": {
+    "deleted": "Successfully deleted!",
+    "api_page": {
+      "title": "API Documentation for \"App Resume Upgrate\""
+    },
+    "password": "Incorrect password!!!",
+    "scripts": {
+      "errors": {
+        "list": "Error when return the SCRIPTS list!",
+        "get_by_id": "Error when return the SCRIPT by ID!",
+        "delete_by_id": "Error when removing the SCRIPT by ID!",
+        "add": "Error when add a new SCRIPT!",
+        "update": "Error when update a SCRIPT!"
+      }
+    },
+    "projects": {
+      "errors": {
+        "list": "Error when return the PROJECTS list!",
+        "get_by_id": "Error when return the PROJECT by ID!",
+        "delete_by_id": "Error when removing the PROJECT by ID!",
+        "add": "Error when add a new PROJECT!",
+        "update": "Error when update of PROJECT!"
+      }
+    },
+    "companies": {
+      "errors": {
+        "list": "Error when return the COMPANIES list!",
+        "get_by_id": "Error when return the COMPANY by ID!",
+        "delete_by_id": "Error when removing the COMPANY by ID!",
+        "add": "Error when add a new COMPANY!",
+        "update": "Error when update of COMPANY!"
+      }
+    },
+    "abouts": {
+      "errors": {
+        "list": "Error when return the ABOUTS list!",
+        "get_by_id": "Error when return the ABOUT by ID!",
+        "delete_by_id": "Error when removing the ABOUT by ID!",
+        "add": "Error when add a new ABOUT!",
+        "update": "Error when update of ABOUT!"
+      }
+    },
+    "users": {
+      "errors": {
+        "list": "Error when return the USERS list!",
+        "get_by_id": "Error when return the USER by ID!",
+        "delete_by_id": "Error when removing the USER by ID!",
+        "add": "Error when add a new USER!",
+        "find_by_email": "Error when finding the USER by email!",
+        "not_exit_email": "That's an email is not exist!",
+        "generating_of_password": "Error when generating of password!"
+      }
+    },
+    "headers": {
+      "errors": {
+        "list": "Error when return the HEADERS list!",
+        "get_by_id": "Error when return the HEADER by ID!",
+        "find_by_email": "Error when finding the HEADER by email!",
+        "delete_by_id": "Error when removing the HEADER by ID!",
+        "add": "Error when add a new HEADER!",
+        "not_exit_email": "That's an email is not exist!",
+        "update": "Error when update of HEADER!"
+      }
+    }
+  }
+}
