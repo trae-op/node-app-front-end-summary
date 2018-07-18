@@ -26,6 +26,8 @@ server.connection({
     }
 });
 
+console.log('process.env.PORT',process.env.PORT)
+
 var privateKey = config.get('jwt_private_key');
 
 server.register([
