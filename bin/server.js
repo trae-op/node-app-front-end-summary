@@ -18,7 +18,7 @@ var routesCompanies = require('../routes/companies');
 
 server.connection({
     port: process.env.PORT || config.get('connection.port'),
-    host: '0.0.0.0',
+    host: config.get('connection.host'),
     routes: { cors: true },
     router: {
       isCaseSensitive: false,

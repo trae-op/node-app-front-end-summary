@@ -1,7 +1,7 @@
 {
   "connection": {
     "port": 8000,
-    "host": "localhost",
+    "host": "0.0.0.0",
     "db": "mongodb://localhost/newresume",
     "db_production": "mongodb://summary:darkmanx1988@ds243041.mlab.com:43041/summary"
   },

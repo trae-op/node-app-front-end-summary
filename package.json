@@ -32,6 +32,7 @@
     "mongoose-migration": "0.2.0"
   },
   "engines": {
+    "npm": "3.10.10",
     "node": "6.10.0"
   }
 }
