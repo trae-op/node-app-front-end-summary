@@ -11,24 +11,24 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^2.0.1",
-    "bell": "^5.0.0",
-    "boom": "^7.1.1",
-    "config": "^1.30.0",
-    "handlebars": "^4.0.11",
-    "hapi": "^8.4.0",
+    "bcrypt": "2.0.1",
+    "bell": "5.0.0",
+    "boom": "7.1.1",
+    "config": "1.30.0",
+    "handlebars": "4.0.11",
+    "hapi": "8.4.0",
     "hapi-auth-jwt": "4.0.0",
     "hapi-swagger": "9.1.1",
-    "lodash": "^4.17.5",
-    "mongoose": "^5.0.6",
+    "lodash": "4.17.5",
+    "mongoose": "5.0.6",
     "mongoose-merge-plugin": "0.0.5",
-    "node-datetime": "^2.0.6",
-    "nodemailer": "^4.6.7",
-    "sendgrid": "^2.0.0",
-    "uuid": "^3.3.2",
-    "vision": "^3.0.0"
+    "node-datetime": "2.0.6",
+    "nodemailer": "4.6.7",
+    "sendgrid": "2.0.0",
+    "uuid": "3.3.2",
+    "vision": "3.0.0"
   },
   "devDependencies": {
-    "mongoose-migration": "^0.2.0"
+    "mongoose-migration": "0.2.0"
   }
 }
