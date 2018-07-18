@@ -18,14 +18,10 @@ var routesCompanies = require('../routes/companies');
 
 server.connection({
     port: process.env.PORT || config.get('connection.port'),
-    host: config.get('connection.host')
-    // routes: {
-    //     cors: true
-    // },
-    // router: {
-    //   isCaseSensitive: false,
-    //   stripTrailingSlash: false
-    // }
+    host: config.get('connection.host'),
+    routes: {
+        cors: true
+    }
 });
 
 var privateKey = config.get('jwt_private_key');
