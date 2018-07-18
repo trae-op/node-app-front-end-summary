@@ -2,7 +2,8 @@
   "connection": {
     "port": 8000,
     "host": "localhost",
-    "db": "mongodb://localhost/newresume"
+    "db": "mongodb://localhost/newresume",
+    "db_production": "mongodb://summary:darkmanx1988@ds243041.mlab.com:43041/summary"
   },
   "project_url": "http://localhost:3000",
   "jwt_private_key": "datrarkeopmanx",
