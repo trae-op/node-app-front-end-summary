@@ -5,24 +5,24 @@
     "db": "mongodb://localhost/newresume",
     "db_production": "mongodb://summary:darkmanx1988@ds243041.mlab.com:43041/summary"
   },
-  "project_url": "http://localhost:3000",
   "jwt_private_key": "datrarkeopmanx",
   "service_email": {
     "service": "gmail",
     "user": "traeopwork@gmail.com",
     "pass": "darkmanx1988"
   },
-  "chargify": {
-    "domain": "the_correct_value_is_in_local_json",
-    "api_key": "the_correct_value_is_in_local_json",
-    "shared_key": "the_correct_value_is_in_local_json"
-  },
   "messages": {
     "deleted": "Successfully deleted!",
     "api_page": {
       "title": "API Documentation for \"App Resume Upgrate\""
     },
+    "email_messages": {
+      "subject": "FE-Summary: Account verification",
+      "not_sent": "----->>>> The message to activate account wasn't sent :(( <<<<-----",
+      "sent": "----->>>> Email sent!!! <<<<-----"
+    },
     "password": "Incorrect password!!!",
+    "failed_loading_plugin": "----> Failed loading plugin!!! <----",
     "scripts": {
       "errors": {
         "list": "Error when return the SCRIPTS list!",

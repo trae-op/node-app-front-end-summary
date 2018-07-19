@@ -21,8 +21,8 @@ function Users(mongoose, connection) {
         email: String,
         password: String,
         created_at: String,
-        role: String,
-        url: String
+        role: String
+        //url: String // if use email for registration
     });
 
     this.model = connection.model('user', this.UsersSchema);
@@ -82,6 +82,7 @@ Users.prototype = {
             });
         });
     },
+    // Registration without activation confirmation by email.
     add : function (body) {
         var _this = this;
         var newData = new this.model(body);
@@ -92,7 +93,7 @@ Users.prototype = {
                     return reject(Boom.badRequest("This email \"" + newData.email + "\" is already existing!"));
                 })
                 .catch(function () {
-                    newData.role = (newData.email === 'traeopwork@gmail.com') ? 'Admin' : 'User';
+                    newData.role = main.checkRole(newData);
                     newData.created_at = main.currentTime();
                     Bcrypt.genSalt(10, function(err, salt) {
                         if (err) {
@@ -115,6 +116,8 @@ Users.prototype = {
 
         });
     },
+
+    // Registration by email. In progress.
     authorization: function (body) {
       var _this = this;
       var newData = new this.model(body);
@@ -151,12 +154,13 @@ Users.prototype = {
           });
       });
     },
+    // Account activation after get message by email. In progress.
     accountActivation: function (body) {
       var _this = this;
       var newData = new this.model(body);
       return new Promise(function (resolve, reject) {
 
-            newData.role = (newData.email === 'traeopwork@gmail.com') ? 'Admin' : 'User';
+            newData.role = main.checkRole(newData);;
             newData.created_at = main.currentTime();
             Bcrypt.genSalt(10, function(err, salt) {
               if (err) {

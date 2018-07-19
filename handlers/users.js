@@ -91,7 +91,7 @@ module.exports = {
             // if there isn't 'password' property when probably it's facebook or google
             var user = decodedToken;
             user.scope = [];
-            user.role = 'User';
+            user.role = main.checkRole(user);
             user.scope.push(user.role);
             return callback(null, true, user);
         } else {
@@ -99,7 +99,6 @@ module.exports = {
                 .then(function (user) {
                     user._doc.scope = [];
                     user._doc.scope.push(user._doc.role);
-                    //console.log('user._doc--->\n', user._doc);
                     return callback(null, true, user._doc);
                 })
                 .catch(function (error) {
@@ -107,6 +106,7 @@ module.exports = {
                 });
         }
     },
+    // Registration by email. In progress.
     authorizationUser: function (request, reply) {
       var body = request.payload;
       users.authorization(body)
@@ -117,6 +117,7 @@ module.exports = {
           renderJSON(reply, error, true);
         });
     },
+    // Account activation after get message by email. In progress.
     accountActivationUser: function (request, reply) {
       var body = request.payload;
       main.checkPassword(body.uuid, { password: body.hash })

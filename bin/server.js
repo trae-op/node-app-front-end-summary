@@ -33,7 +33,7 @@ server.register([
 ], function (error) {
 
     if (error) {
-        console.log('----> Failed loading plugin!!! <----');
+        console.log(config.get('messages.failed_loading_plugin'));
         return;
     }
 
@@ -55,20 +55,21 @@ server.register([
         routesCompanies
     );
 
-  // server.route({
-  //   method: 'GET',
-  //   path: '/{param*}',
-  //   config: {
-  //     handler: {
-  //       directory : {
-  //         path : 'views'
-  //       }
-  //     },
-  //     auth: {
-  //       mode: 'try'
-  //     }
-  //   }
-  // });
+    // --->>> if use public <<<---
+    // server.route({
+    //   method: 'GET',
+    //   path: '/{param*}',
+    //   config: {
+    //     handler: {
+    //       directory : {
+    //         path : 'public'
+    //       }
+    //     },
+    //     auth: {
+    //       mode: 'try'
+    //     }
+    //   }
+    // });
 
     server.route(allRoutes);
 });
