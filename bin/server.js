@@ -21,8 +21,9 @@ server.connection({
     host: config.get('connection.host'),
     routes: {
       cors: {
-        origin: ['*'],
-        credentials: true
+        origin: ["*"],
+        headers: ["Accept", "Content-Type"],
+        additionalHeaders: ["X-Requested-With"]
       }
     }
 });
