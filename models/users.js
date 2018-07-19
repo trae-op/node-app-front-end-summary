@@ -21,7 +21,8 @@ function Users(mongoose, connection) {
         email: String,
         password: String,
         created_at: String,
-        role: String
+        role: String,
+        url: String
     });
 
     this.model = connection.model('user', this.UsersSchema);
@@ -139,9 +140,9 @@ Users.prototype = {
                 temporaryDataUser.password = newData.password;
                 temporaryDataUser.uuid = uuid;
                 temporaryDataUser.hash = hash;
+                temporaryDataUser.url = newData.url;
                 sendEmail(temporaryDataUser).then(function () {
-                  delete temporaryDataUser.hash;
-                  //console.log(temporaryDataUser);
+                  delete temporaryDataUser.url;
                   resolve(temporaryDataUser);
                 });
               });

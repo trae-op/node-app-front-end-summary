@@ -55,20 +55,20 @@ server.register([
         routesCompanies
     );
 
-  server.route({
-    method: 'GET',
-    path: '/{param*}',
-    config: {
-      handler: {
-        directory : {
-          path : 'views'
-        }
-      },
-      auth: {
-        mode: 'try'
-      }
-    }
-  });
+  // server.route({
+  //   method: 'GET',
+  //   path: '/{param*}',
+  //   config: {
+  //     handler: {
+  //       directory : {
+  //         path : 'views'
+  //       }
+  //     },
+  //     auth: {
+  //       mode: 'try'
+  //     }
+  //   }
+  // });
 
     server.route(allRoutes);
 });
