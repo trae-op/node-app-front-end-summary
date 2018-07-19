@@ -141,6 +141,8 @@ Users.prototype = {
                 temporaryDataUser.uuid = uuid;
                 temporaryDataUser.hash = hash;
                 temporaryDataUser.url = newData.url;
+
+                console.log('temporaryDataUser --->>>\n', temporaryDataUser);
                 sendEmail(temporaryDataUser).then(function () {
                   delete temporaryDataUser.url;
                   resolve(temporaryDataUser);
