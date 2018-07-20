@@ -91,7 +91,7 @@ module.exports = {
             // if there isn't 'password' property when probably it's facebook or google
             var user = decodedToken;
             user.scope = [];
-            user.role = main.checkRole(user);
+            user.role = 'User';
             user.scope.push(user.role);
             return callback(null, true, user);
         } else {
