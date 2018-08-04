@@ -9,8 +9,8 @@ module.exports = [
         path: '/api/users',
         method: 'GET',
         config: {
-            description: 'Delete "about" by ID',
-            notes: 'Return message about deleted "about"',
+            description: 'Delete "users" by ID',
+            notes: 'Return message user deleted "users"',
             tags: ['api'],
             auth: {
                 mode: 'try'
@@ -23,12 +23,12 @@ module.exports = [
         path: '/api/users/{user_id}',
         method: 'GET',
         config: {
-            description: 'Delete "about" by ID',
-            notes: 'Return message about deleted "about"',
+            description: 'Delete "users" by ID',
+            notes: 'Return message user deleted "users"',
             tags: ['api'],
             auth: {
-                //mode: 'try',
-                scope: ['Admin']
+                mode: 'try'
+                //scope: ['Admin']
             },
             validate: {
                 params: {
@@ -42,8 +42,8 @@ module.exports = [
         path: '/api/users',
         method: 'POST',
         config: {
-            description: 'Delete "about" by ID',
-            notes: 'Return message about deleted "about"',
+            description: 'Delete "users" by ID',
+            notes: 'Return message user deleted "users"',
             tags: ['api'],
             auth: {
                 mode: 'try'
@@ -56,8 +56,8 @@ module.exports = [
         path: '/api/users/{user_id}',
         method: 'DELETE',
         config: {
-            description: 'Delete "about" by ID',
-            notes: 'Return message about deleted "about"',
+            description: 'Delete "users" by ID',
+            notes: 'Return message user deleted "users"',
             tags: ['api'],
             validate: {
                 params: {
@@ -65,8 +65,8 @@ module.exports = [
                 }
             },
             auth: {
-                //scope: ['Admin'],
-                mode: 'try'
+                scope: ['Admin']
+                //mode: 'try'
             },
             handler: users.deleteUserById
         }
